@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ElitePets';
+  subtitle = 'Dating for serious pets';
 }
