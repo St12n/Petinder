@@ -31,6 +31,41 @@
                    [(ngModel)]="searchText">
           </div>
         </section>
+
+        <section class="tiny-dialog">
+          <h3>Add Pet</h3>
+          <form [formGroup]="addPetForm" (ngSubmit)="onSubmit()">
+            <div>
+              <label>Name</label>
+              <input class="form-control" type="text" formControlName="name">
+            </div>
+
+            <div>
+              <label>Kind</label>
+              <input class="form-control" type="text" formControlName="kind">
+            </div>
+
+            <div>
+              <label>Image</label>
+              <input class="form-control" type="text" formControlName="image">
+            </div>
+
+            <div>
+              <label>ProfileText</label>
+              <input class="form-control"
+                     type="text" formControlName="profileText">
+            </div>
+            <div>
+              <label>Popularity</label>
+              <input class="form-control"
+                     type="number" formControlName="popularity">
+            </div>
+
+            <button class="button" type="submit">Add Pet</button>
+
+          </form>
+        </section>
+
       </div>
     </div>
   </div>

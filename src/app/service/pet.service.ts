@@ -18,4 +18,8 @@ export class PetService {
   getPets(): Observable<any> {
     return this.http.get<Pet[]>(this.backendUrl).pipe(map(pets => pets.sort((a: Pet, b: Pet): number => a.name.localeCompare(b.name))));
   }
+
+  addPet(pet: Pet) {
+    return this.http.post(this.backendUrl, pet);
+  }
 }
